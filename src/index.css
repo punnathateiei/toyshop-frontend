@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 1. ซ่อนลูกศรทั้งหมดไว้เป็นค่าเริ่มต้น (บังคับใช้แม้จะเป็น disabled) */
+.mySwiper .swiper-button-prev,
+.mySwiper .swiper-button-next {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* 2. บังคับซ่อนลูกศรที่ 'disabled' ด้วย (สำคัญมาก) */
+.mySwiper .swiper-button-prev.swiper-button-disabled,
+.mySwiper .swiper-button-next.swiper-button-disabled {
+    opacity: 0; 
+}
+
+/* 3. เมื่อเมาส์ชี้ ให้โชว์ลูกศร *เฉพาะอันที่กดได้* (คืออันที่ :not(.swiper-button-disabled)) */
+.mySwiper:hover .swiper-button-prev:not(.swiper-button-disabled),
+.mySwiper:hover .swiper-button-next:not(.swiper-button-disabled) {
+    opacity: 1;
+}
+
+/* 4. (เสริม) แต่งสีลูกศร (อันนี้เหมือนเดิม) */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 24px !important;
+    color: #333;
+    font-weight: bold;
+}
+
+.mySwiper .swiper-pagination {
+    position: static;  /* <-- นี่คือตัวแก้ปัญหาครับ! */
+    margin-top: 5px;  /* <-- ใช้ margin-top เพื่อเว้นระยะห่างจากรูปแทน */
+}
