@@ -75,7 +75,8 @@ const Formproduct = () => {
     return (
         <div className='container mx-auto p-4 bg-white shadow-md'>
             <form onSubmit={handleSubmit}>
-                <h1>เพิ่มข้อมูลสินค้า</h1>
+                {/* === CHANGED === */}
+                <h1>Add Product Information</h1>
                 <input
                     className='border'
                     value={form.title}
@@ -125,22 +126,24 @@ const Formproduct = () => {
                 
                 <Uploadfile form={form} setform={setform}/>
 
-                <button className='bg-blue-500 p-2 rounded-md shadow-md hover:scale-105 hover:translate-y-1 hover:duration-200'>เพิ่มสินค้า</button>
+                {/* === CHANGED === */}
+                <button className='bg-blue-500 p-2 rounded-md shadow-md hover:scale-105 hover:translate-y-1 hover:duration-200'>Add Product</button>
 
                 <hr />
                 <br />
                 <table className="table w-full border text-center">
                     <thead>
+                        {/* === CHANGED HEADERS === */}
                         <tr className='bg-gray-200 border'>
                             <th scope="col">No</th>
-                            <th scope="col">รูปภาพ</th>
-                            <th scope="col">ชื่อสินค้า</th>
-                            <th scope="col">รายละเอียด</th>
-                            <th scope="col">ราคา</th>
-                            <th scope="col">จำนวน</th>
-                            <th scope="col">จำนวนที่ขาย</th>
-                            <th scope="col">วันที่อัพเดท</th>
-                            <th scope="col">จัดการ</th>
+                            <th scope="col">Image</th>
+                            <th scope="col">Product Name</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Sold</th>
+                            <th scope="col">Last Updated</th>
+                            <th scope="col">Actions</th>
                         </tr>
                     </thead>
                     <tbody>

@@ -64,7 +64,7 @@ const Tableuser = () => {
     }
 
     return (
-        <div className='container mx-auto p-4 bg-white shadow-md'>
+        <div className='container mx-auto p-4 bg-white shadow-md text-left'>
             <table className='w-full'>
                 <thead>
                     <tr>

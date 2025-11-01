@@ -56,9 +56,6 @@ const Register = () => {
     }
   }
 
-  // const tam = Array.from(Array(5))
-  // console.log(tam)
-
   return (
     <div className='min-h-screen flex items-center justify-center bg-gray-100'>
       <div className='w-full shadow-md bg-white p-8 max-w-md'>

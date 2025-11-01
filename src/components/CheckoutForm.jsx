@@ -24,7 +24,6 @@ export default function CheckoutForm() {
         }
 
         setIsLoading(true);
-
         const payload = await stripe.confirmPayment({
             elements,
             redirect: 'if_required'
@@ -51,7 +50,6 @@ export default function CheckoutForm() {
             console.log('wrong')
             toast.warning('Payment Failed')
         }
-
         setIsLoading(false);
     };
 

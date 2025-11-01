@@ -78,7 +78,7 @@ const FormEditproduct = () => {
     return (
         <div className='container mx-auto p-4 bg-white shadow-md'>
             <form onSubmit={handleSubmit}>
-                <h1>เพิ่มข้อมูลสินค้า</h1>
+                <h1>Add Product Information</h1>
                 <input
                     className='border'
                     value={form.title}
@@ -128,7 +128,7 @@ const FormEditproduct = () => {
 
                 <Uploadfile form={form} setform={setform} />
 
-                <button className='bg-blue-500 p-2 rounded-md shadow-md hover:scale-105 hover:translate-y-1 hover:duration-200'>แก้ไขสินค้า</button>
+                <button className='bg-blue-500 p-2 rounded-md shadow-md hover:scale-105 hover:translate-y-1 hover:duration-200'>Edit Product</button>
 
                 <hr />
                 <br />

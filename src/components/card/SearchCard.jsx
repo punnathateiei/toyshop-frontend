@@ -18,8 +18,8 @@ const SearchCard = () => {
     const [categorySelected, setcategorySelected] = useState([]);
 
     const sortOptions = [
-        { value: "lowToHigh", label: "ราคาต่ำ-สูง" },
-        { value: "highToLow", label: "ราคาสูง-ต่ำ" },
+        { value: "lowToHigh", label: "Low to High" },
+        { value: "highToLow", label: "High to Low" },
     ];
     // ให้ react-select แสดง option ตาม state ใน store (default = ราคาต่ำ-สูง)
     const selectedSortOption =
@@ -84,7 +84,7 @@ const SearchCard = () => {
             <hr className="my-2" />
 
             <div className="mb-4">
-                <h1 className="text-xl mb-2">เรียงตาม:</h1>
+                <h1 className="text-xl mb-2 font-bold">Sort By:</h1>
                 <Select
                     options={sortOptions}
                     value={selectedSortOption}     // ✅ แสดง default จาก store
@@ -98,7 +98,7 @@ const SearchCard = () => {
             <hr className="my-2 " />
 
             <div>
-                <h1 className="text-xl">หมวดหมู่</h1>
+                <h1 className="text-xl font-bold">Categories</h1>
                 <div className="mt-2">
                     {categories.map((item) => (
                         <div key={item.id} className="flex gap-2 items-center">

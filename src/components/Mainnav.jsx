@@ -46,7 +46,7 @@ function Mainnav() {
                             ? <div className="flex items-center gap-4">
                                 <button
                                     onClick={toggleDropdown}
-                                    className="flex items-center gap-2 hover:opacity-60 transition bg-red-200 px-2 py-1">
+                                    className="flex items-center gap-2 hover:opacity-60 transition px-2 py-1">
                                     <img src={UserIcon} alt="User Icon" className="w-6 h-6" />
                                     <ChevronDown />
                                 </button>
@@ -79,18 +79,9 @@ function Mainnav() {
                                         ? ' text-red-500 font-bold'
                                         : ' hover:text-red-500'
                                 } to={'/login'}>Login</NavLink>
-
-
-
                             </div>
                     }
-
-
-
-
-
                 </div>
-
             </div>
         </nav>
     )
